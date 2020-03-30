@@ -5,3 +5,4 @@ A simple docker file based on alpine that includes
 - helmfile
 - helm-diff
 - kubectl
+- istioctl

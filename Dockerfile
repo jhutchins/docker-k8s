@@ -17,3 +17,7 @@ RUN HELM_PLUGIN_DIR=/root/.local/share/helm/plugins/helm-diff helm plugin instal
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl; \
     chmod +x ./kubectl; \
     mv ./kubectl /usr/local/bin/kubectl
+
+# istio
+RUN curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.5.1 sh -
+ENV PATH=istio-1.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
